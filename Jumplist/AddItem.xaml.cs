@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Jumplist.Repository;
 
 namespace Jumplist
 {
@@ -19,7 +20,8 @@ namespace Jumplist
 
         private void AddNewItemClicked(object sender, RoutedEventArgs e)
         {
-
+            DataRepository.AddNewPerson(newValue.Text);
+            NavigationService.GoBack();
         }
     }
 }

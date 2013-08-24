@@ -20,7 +20,17 @@ namespace Jumplist
         public MainPage()
         {
             InitializeComponent();
-            
+        }
+
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            allPersons.ItemsSource = DataRepository.GroupedPersons;
+        }
+
+        private void AddItemClick(object sender, EventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/AddItem.xaml", UriKind.Relative));
         }
     }
 }
