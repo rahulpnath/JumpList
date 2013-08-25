@@ -47,7 +47,25 @@ namespace Jumplist.Repository
 
         static DataRepository()
         {
-            Persons = new ObservableCollection<Person>();
+            Persons = new ObservableCollection<Person>()
+            {
+                new Person() { Name = "Bill Gates"},
+                new Person() { Name = "Steve Jobs"},
+                new Person() { Name = "Larry Page"},
+                new Person() { Name = "Sergey Brin"},
+                new Person() { Name = "Tim Berners-Lee"},
+                new Person() { Name = "James Gosling"},
+                new Person() { Name = "Linus Torvalds"},
+                new Person() { Name = "Richard Stallman"},
+                new Person() { Name = "Arthur C Clark"},   
+                new Person() { Name = "Ted Codd"},
+                new Person() { Name = "Steve Shirley"},
+                new Person() { Name = "Martha Lane Fox"},
+                new Person() { Name = "Mark  Elliot Zuckerberg"},
+                new Person() { Name = "Azim Premji"}
+
+            };
+            
         }
 
         public static bool AddNewPerson(string Name)
